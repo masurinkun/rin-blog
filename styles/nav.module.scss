@@ -1,0 +1,22 @@
+.list {
+  display: flex;
+  gap: 2em;
+}
+
+/* ホバーできる環境(デスクトップ環境)に適用する設定 */
+@media (hover: hover) {
+  .list span:hover {
+    color: var(--accent);
+  }
+}
+
+/* ホバーできる環境(モバイル環境)に適用する設定 */
+@media (hover: none) {
+  .list span {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .list span:active {
+    color: var(--accent);
+  }
+}

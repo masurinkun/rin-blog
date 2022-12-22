@@ -1,25 +1,26 @@
 import Link from "next/link";
+import styles from "styles/nav.module.scss";
 
 export default function Nav() {
   return (
-    <Nav>
-      <ul>
+    <nav>
+      <ul className={styles.list}>
         <li>
           <Link href="/">
-            <a>Home</a>
+            <span>Home</span>
           </Link>
         </li>
         <li>
           <Link href="/about">
-            <a>About</a>
+            <span>About</span>
           </Link>
         </li>
         <li>
           <Link href="/blog">
-            <a>Blog</a>
+            <span>Blog</span>
           </Link>
         </li>
       </ul>
-    </Nav>
+    </nav>
   );
 }
