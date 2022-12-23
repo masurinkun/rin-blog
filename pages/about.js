@@ -8,6 +8,10 @@ import PostBody from "components/post-body";
 import eyecatch from 'images/about.jpg'
 
 export default function About() {
+    const microCMSLoader = ({ src, width, quality }) => {
+      return `${src}?auto=format&fit=max&w=${width}`;
+    };
+
   return (
     <Container>
       <Meta
@@ -20,6 +24,7 @@ export default function About() {
       <Hero title="About" subtitle="About development activities." />
       <figure>
         <Image
+          loader={microCMSLoader}
           src={eyecatch}
           alt=""
           layout="responsive"
@@ -50,7 +55,6 @@ export default function About() {
           <Contact />
         </TwoColumn.Sidebar>
       </TwoColumn>
-
     </Container>
   );
 }
