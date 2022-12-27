@@ -1,6 +1,91 @@
-.list {
-  display: flex;
-  gap: 2em;
+/* desktop */
+@media (min-width: 768px) {
+  .btn {
+    display: none;
+  }
+  .list {
+    display: flex;
+    gap: 2em;
+  }
+}
+
+/* mobile */
+@media (max-width: 767px) {
+  .btn {
+    all: unset;
+    outline: revert;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+    width: 42px;
+    height: 42px;
+    position: relative;
+    z-index: 200;
+  }
+
+  .close .btn {
+    color: var(--gray-75);
+  }
+
+  .open .btn {
+    color: var(--white);
+  }
+
+  /* bar */
+  .btn {
+    display: grid;
+    place-items: center;
+  }
+  .btn::before,
+  .btn::after,
+  .btn .bar {
+    grid-area: 1 / 1;
+    content: "";
+    display: block;
+    width: 32px;
+    height: 1px;
+    background-color: currentColor;
+    transition: transform 0.4s;
+  }
+  .close .btn::before {
+    transform: translateY(-8px);
+  }
+  .close .btn::after {
+    transform: translateY(8px);
+  }
+  .open .btn::before {
+    transform: rotate(45deg);
+  }
+  .open .btn::after {
+    transform: rotate(-45deg);
+  }
+  .open .btn .bar {
+    transform: scale(0);
+  }
+
+  /* MENU (overlay) */
+  .list {
+    position: fixed;
+    // overlayは画面に合わせたサイズで右の画面外に配置するため、
+    // 4辺の位置をinsetで画面の中央左右から右側への距離で
+    inset: 0 -100% 0 100%;
+    // と指定している
+    z-index: 100;
+    background: rgba(#000, .8);
+    color: var(--white);
+    transition: transform 0.4s;
+  }
+
+  .open .list {
+    transform: translateX(-100%);
+  }
+
+  /* MENU (overlay内の配置) */
+  .list {
+    display: grid;
+    gap: 40px;
+    place-content: center;
+    text-align: center;
+  }
 }
 
 /* ホバーできる環境(デスクトップ環境)に適用する設定 */
