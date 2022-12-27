@@ -3,7 +3,8 @@ const nextConfig = {
   reactStrictMode: true,
   // next/image で扱えるようにするため、外部サイトの画像であるアイキャッチのドメインを指定する
   images: {
-    loader: "custom",
+    loader: "imgix",
+    path: '',
     domains: ["images.microcms-assets.io"],
   },
 };
