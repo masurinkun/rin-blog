@@ -10,29 +10,33 @@ import { config } from '@fortawesome/fontawesome-svg-core'
 config.autoAddCss = false
 
 function MyApp({ Component, pageProps }) {
-  const router = useRouter()
+  const router = useRouter();
   useEffect(() => {
     const handleRouteChange = (url) => {
-      gtag.pageview(url)
-    }
-    router.events.on('routeChangeComplete', handleRouteChange)
+      gtag.pageview(url);
+    };
+    router.events.on("routeChangeComplete", handleRouteChange);
     return () => {
-      router.events.off('routeChangeComplete', handleRouteChange)
-    }
-  }, [router.events])
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
+
+  // getLayoutにはページコンポーネントのgetLayoutプロパティに用意されたレイアウトを構成する関数を渡し、
+  // getLayoutプロパティが存在しない場合には、これまで通りのレイアウトでページコンポーネントをそのまま表示する関数を渡す
+  const getLayout = Component.getLayout || ((page) => page);
   return (
     <>
       {/* グローバルサイトタグをインストールするためのコード*/}
       {/* START */}
       <Script
-        strategy='afterInteractive'
+        strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_MEASUREMENT_ID}`}
       />
       <Script
-        id='gtag-init'
-        strategy='afterInteractive'
+        id="gtag-init"
+        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
-          __html:`
+          __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
@@ -42,9 +46,7 @@ function MyApp({ Component, pageProps }) {
         }}
       />
       {/* END */}
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <Layout>{getLayout(<Component {...pageProps} />)}</Layout>
     </>
   );
 }
