@@ -1,11 +1,13 @@
 /** @type {import('next-sitemap').IConfig} */
 
 const config = {
-  siteUrl: "https://***********",
-  outDir: './out',
+  siteUrl: "https://rin-blog-masurinkun.vercel.app/",
+  outDir: "./out",
   exclude: ["/server-sitemap.xml"],
   robotsTxtOptions: {
-    additionalSitemaps: ["https://***********/server-sitemap.xml"],
+    additionalSitemaps: [
+      "https://rin-blog-masurinkun.vercel.app/server-sitemap.xml",
+    ],
   },
 };
 
