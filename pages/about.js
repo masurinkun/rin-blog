@@ -7,7 +7,7 @@ import Container from "components/container";
 import PostBody from "components/post-body";
 import eyecatch from 'images/about.jpg'
 import Accordion from "@/components/accordion";
-import BlueFrame from "@/components/blue-frame";
+// import BlueFrame from "@/components/blue-frame";
 
 export default function About() {
     const microCMSLoader = ({ src, width, quality }) => {
