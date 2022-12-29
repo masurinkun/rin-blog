@@ -1,6 +1,6 @@
+import { getServerSideSitemap } from 'next-sitemap'
 import { getAllCategories, getAllSlugs } from 'lib/api'
 import { siteMeta } from 'lib/constants'
-import { getServerSideSitemap } from 'next-sitemap'
 
 // ページコンポーネントは空にしてHTMLを出力しないようにする
 export default function Sitemap() {}
