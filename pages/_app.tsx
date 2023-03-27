@@ -3,6 +3,7 @@ import Script from 'next/script'
 import * as gtag from '../lib/gtag'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
+import type { NextComponentType, NextPageContext } from "next";
 import type { AppProps } from 'next/app'
 // Font Awesome
 import '@fortawesome/fontawesome-svg-core/styles.css'
@@ -11,11 +12,19 @@ import Layout from '@components/layouts/layout'
 
 config.autoAddCss = false
 
-function MyApp({ Component, pageProps }: AppProps) {
+type Page<P = {}> = NextComponentType<NextPageContext, any, P> & {
+  getLayout?: (page: JSX.Element) => JSX.Element;
+};
+
+type AppPropsWithLayout = AppProps & {
+  Component: Page;
+};
+
+function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const router = useRouter();
 
   useEffect(() => {
-    const handleRouteChange = (url:string) => {
+    const handleRouteChange = (url: string) => {
       gtag.pageview(url);
     };
 
