@@ -17,9 +17,9 @@ const Home: React.FC<HomeProps> = ({ posts }) => {
   return (
     <Container>
       <Meta />
-      <Hero title="CUBE" subtitle="The site is for output." imageOn />
+      <Hero title="Portfolio" subtitle="web coder" imageOn />
       <Posts posts={posts} />
-      <Pagination nextUrl="/blog" nextText="More Posts" />
+      <Pagination nextUrl="/blog" nextText="More Works" />
     </Container>
   );
 };

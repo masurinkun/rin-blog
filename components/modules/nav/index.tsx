@@ -46,7 +46,7 @@ const Nav: React.FC = () => {
         </li>
         <li>
           <Link href="/blog">
-            <span onClick={closeNav}>Blog</span>
+            <span onClick={closeNav}>Works</span>
           </Link>
         </li>
       </ul>

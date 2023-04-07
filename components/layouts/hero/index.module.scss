@@ -8,11 +8,17 @@
 }
 
 .title {
-  font-size: var(--display);
+  font-size: calc(var(--display) * 0.8);
   font-weight: 900;
   letter-spacing: 0.15em;
 }
 
 .subtitle {
   font-size: var(--small-heading2);
+}
+
+@media screen and (max-width: 767px) {
+  .image {
+    display: none;
+  }
 }

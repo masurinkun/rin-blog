@@ -15,8 +15,8 @@ type BlogProps = {
 const Blog: React.FC<BlogProps> = ({ posts }) => {
   return (
     <Container>
-      <Meta pageTitle="blog" pageDesc="ブログの記事一覧" />
-      <Hero title="Blog" subtitle="Here are recent Posts." />
+      <Meta pageTitle="work" pageDesc="制作実績一覧" />
+      <Hero title="Work" subtitle="※NDAの関係でポートフォリオに掲載できない実績もあります" />
       <Posts posts={posts} />
     </Container>
   );

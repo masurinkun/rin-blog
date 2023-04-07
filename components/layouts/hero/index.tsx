@@ -1,6 +1,6 @@
 import styles from './index.module.scss'
 import Image from "next/image";
-import cube from "images/cube.jpg";
+import cube from "images/logo_r.jpg";
 
 type HeroProps = {
   title: string
@@ -20,7 +20,7 @@ type HeroProps = {
         <p className={styles.subtitle}>{subtitle}</p>
       </div>
       {imageOn && (
-        <figure>
+        <figure className={styles.image}>
           <Image
             loader={microCMSLoader}
             src={cube}

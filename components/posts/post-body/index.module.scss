@@ -17,6 +17,14 @@
   line-height: 1.8;
 }
 
+.stack a {
+  color: #1592e6 !important;
+  transition: all 0.3s ease 0s;
+  &:hover {
+    opacity: .7;
+  }
+}
+
 /* グローバルスタイルでリセットしたスタイルをブラウザ標準のスタイルに戻すように指定 */
 .stack ul {
   padding: revert;

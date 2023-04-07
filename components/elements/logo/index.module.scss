@@ -2,6 +2,7 @@
   font-size: var(--heading2);
   font-weight: 700;
   letter-spacing: 0.15em;
+  text-transform: uppercase;
 }
 
 .box {
@@ -11,4 +12,5 @@
   background-color: var(--gray-75);
   color: var(--white);
   font-size: var(--small-heading2);
+  border-radius: 50% 20% / 10% 40%;
 }

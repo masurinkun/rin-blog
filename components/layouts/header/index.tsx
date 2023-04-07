@@ -8,7 +8,7 @@ const Header: React.FC = () => {
     <header>
       <Container large>
         <div className={styles.flexContainer}>
-          <Logo boxOn />
+          <Logo />
           <Nav />
         </div>
       </Container>

@@ -1,14 +1,26 @@
 import Link from "next/link";
 import styles from "./index.module.scss";
+import Image from "next/image";
+import cube from "images/logo_r.png";
 
-type LogoProps = {
-  boxOn?: boolean;
-}
 
-const Logo: React.FC<LogoProps> = ({ boxOn = false }) => {
+
+const Logo: React.FC = () => {
+        const microCMSLoader = ({ src, width }) => {
+          return `${src}?auto=format&fit=max&w=${width}`;
+        };
+
   return (
     <Link href="/">
-      <p className={boxOn ? styles.box : styles.basic}>CUBE</p>
+      <Image
+        loader={microCMSLoader}
+        src={cube}
+        alt=""
+        layout="responsive"
+        sizes="(min-width: 1152px) 576px, (min-width: 768px) 50vw, 100vw"
+        priority
+        placeholder="blur"
+      />
     </Link>
   );
 }

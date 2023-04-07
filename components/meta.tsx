@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import { siteMeta } from "lib/constants";
 const { siteTitle, siteDesc, siteUrl, siteLocale, siteType, siteIcon} = siteMeta
 // 汎用OGP画像
-import siteImg from 'images/ogp.jpg'
+import siteImg from "images/ogp_image.jpg";
 import React from "react";
 
 export type MetaProps = {
