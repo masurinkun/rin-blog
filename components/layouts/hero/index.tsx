@@ -1,6 +1,7 @@
 import styles from './index.module.scss'
 import Image from "next/image";
 import cube from "images/logo_r.jpg";
+import React from "react";
 
 type HeroProps = {
   title: string

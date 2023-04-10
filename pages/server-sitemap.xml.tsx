@@ -1,13 +1,12 @@
-import { getServerSideSitemap } from 'next-sitemap'
+import { getServerSideSitemap } from "next-sitemap";
 import { GetServerSideProps } from "next";
-import { getAllCategories, getAllSlugs } from 'lib/api'
-import { siteMeta } from 'lib/constants'
+import { getAllCategories, getAllSlugs } from "lib/api";
+import { siteMeta } from "lib/constants";
 
 // ページコンポーネントは空にしてHTMLを出力しないようにする
-export default function Sitemap() {}
+// export default function Sitemap() {}
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-
   // getAllSlugs()で全ての記事のスラッグを取得。
   // サイトのURLを付加して<loc>の値として指定し、postFieldsに入れている
   const posts = await getAllSlugs();
@@ -15,7 +14,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     return {
       loc: `${siteMeta.siteUrl}/${post.slug}`,
       lastmod: post.revisedAt,
-      changefreq: 'daily',
+      changefreq: "daily",
     };
   });
 
@@ -32,4 +31,4 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const allFields = [...postFields, ...catFields];
 
   return await getServerSideSitemap(context, allFields);
-}
+};

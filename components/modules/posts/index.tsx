@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/legacy/image";
 import styles from "./index.module.scss";
+import React from "react";
 import { postType } from "@components/types";
 
 type PostsProps = {

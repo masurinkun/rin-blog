@@ -1,4 +1,6 @@
 import styles from './index.module.scss'
+import React from "react";
+import PropTypes from "prop-types";
 
 type TwoColumnProps = {
   children: React.ReactNode;
@@ -27,5 +29,15 @@ TwoColumn.Sidebar = function Sidebar({children}) {
     </div>
   )
 }
+
+TwoColumn.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+TwoColumn.Main.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+TwoColumn.Sidebar.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 
 export default TwoColumn;

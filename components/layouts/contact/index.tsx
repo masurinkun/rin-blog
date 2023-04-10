@@ -1,5 +1,6 @@
 import styles from "./index.module.scss";
 import Social from "@components/modules/social";
+import React from "react";
 
 const Contact: React.FC = () => {
   return (

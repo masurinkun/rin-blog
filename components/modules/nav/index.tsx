@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import styles from "./index.module.scss";
+import React from "react";
 
 const Nav: React.FC = () => {
   const [navIsOpen, setNavIsOpen] = useState(false);
@@ -17,7 +18,7 @@ const Nav: React.FC = () => {
     <nav className={navIsOpen ? styles.open : styles.close}>
       {/*menuが開いた時にページがスクロールしないようにする*/}
       {navIsOpen && (
-        <style jsx global>
+        <style>
           {`
             @media (max-width: 767px) {
               body {

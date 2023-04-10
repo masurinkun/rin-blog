@@ -1,14 +1,12 @@
 import Link from "next/link";
-import styles from "./index.module.scss";
 import Image from "next/image";
 import cube from "images/logo_r.png";
-
-
+import React from "react";
 
 const Logo: React.FC = () => {
-        const microCMSLoader = ({ src, width }) => {
-          return `${src}?auto=format&fit=max&w=${width}`;
-        };
+  const microCMSLoader = ({ src, width }) => {
+    return `${src}?auto=format&fit=max&w=${width}`;
+  };
 
   return (
     <Link href="/">

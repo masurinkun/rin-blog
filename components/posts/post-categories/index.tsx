@@ -1,5 +1,6 @@
 import styles from './index.module.scss'
 import Link from 'next/link'
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFolderOpen } from "@fortawesome/free-regular-svg-icons";
 import { categoryType } from '@components/types';

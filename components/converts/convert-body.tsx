@@ -1,6 +1,7 @@
 import parse  from "html-react-parser";
 import Image from "next/legacy/image";
 import type { DomElement } from "html-parse-stringify";
+import React from "react";
 
 type ConvertBodyProps = {
   contentHTML: string;

@@ -1,6 +1,7 @@
 import Container from "@components/layouts/container";
 import Hero from "@components/layouts/hero";
 import Meta from "components/meta";
+import React from "react";
 
 const Custom404: React.FC = () => {
   return (

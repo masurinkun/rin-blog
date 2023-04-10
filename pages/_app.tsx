@@ -3,24 +3,20 @@ import Script from 'next/script'
 import * as gtag from '../lib/gtag'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
-import type { NextComponentType, NextPageContext } from "next";
-import type { AppProps } from 'next/app'
+import { AppContext, AppInitialProps, AppLayoutProps } from "next/app";
+import type { NextComponentType } from "next";
 // Font Awesome
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import { config } from '@fortawesome/fontawesome-svg-core'
 import Layout from '@components/layouts/layout'
+import React from "react"
 
 config.autoAddCss = false
 
-type Page<P = {}> = NextComponentType<NextPageContext, any, P> & {
-  getLayout?: (page: JSX.Element) => JSX.Element;
-};
-
-type AppPropsWithLayout = AppProps & {
-  Component: Page;
-};
-
-function MyApp({ Component, pageProps }: AppPropsWithLayout) {
+const MyApp: NextComponentType<AppContext, AppInitialProps, AppLayoutProps> = ({
+  Component,
+  pageProps,
+}: AppLayoutProps) => {
   const router = useRouter();
 
   useEffect(() => {
@@ -64,6 +60,6 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
       <Layout>{getLayout(<Component {...pageProps} />)}</Layout>
     </>
   );
-}
+};
 
 export default MyApp

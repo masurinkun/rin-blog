@@ -2,6 +2,7 @@ import Container from "@components/layouts/container";
 import Hero from "@components/layouts/hero";
 import Meta from "components/meta";
 import Posts from "@components/modules/posts";
+import React from "react";
 import { getAllPosts } from "lib/api";
 import { getPlaiceholder } from "plaiceholder";
 import { eyecatchLocal } from "lib/constants";
@@ -28,7 +29,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const posts = await getAllPosts();
 
   for (const post of posts) {
-    if (!post.hasOwnProperty("eyecatch")) {
+    if (!Object.prototype.hasOwnProperty.call(post, "eyecatch")) {
       post.eyecatch = eyecatchLocal;
     }
     const { base64 } = await getPlaiceholder(post.eyecatch.url);

@@ -14,6 +14,7 @@ import PostCategories from "@components/posts/post-categories";
 import Meta from "@components/meta";
 import Pagination from "@components/modules/pagination";
 import { categoryType } from "@components/types";
+import React from "react";
 
 type PostProps = {
   title: string;

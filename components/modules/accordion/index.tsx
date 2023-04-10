@@ -2,6 +2,7 @@ import styles from "./index.module.scss";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { useRef, useState } from "react";
+import React from "react";
 
 type AccordionProps = {
   heading: string;

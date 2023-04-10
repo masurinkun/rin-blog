@@ -7,6 +7,7 @@ import { eyecatchLocal } from "lib/constants";
 import { getPlaiceholder } from "plaiceholder";
 import { GetStaticProps, GetStaticPaths } from "next";
 import { postType } from "@components/types";
+import React from "react";
 
 type CategoryProps = {
   name: string;
@@ -50,7 +51,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const posts = await getAllPostsByCategory(cat.id);
 
   for (const post of posts) {
-    if (!post.hasOwnProperty("eyecatch")) {
+    if (!Object.prototype.hasOwnProperty.call(post, "eyecatch")) {
       post.eyecatch = eyecatchLocal;
     }
     const { base64 } = await getPlaiceholder(post.eyecatch.url);

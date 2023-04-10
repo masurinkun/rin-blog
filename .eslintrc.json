@@ -3,7 +3,12 @@
     "next",
     "next/core-web-vitals",
     "prettier",
-    "next/babel",
-    "plugin:next/recommended"
-  ]
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "rules": {
+    "react/no-unescaped-entities": "off",
+    "@typescript-eslint/ban-types": "off"
+  }
 }

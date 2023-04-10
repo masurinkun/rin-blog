@@ -7,6 +7,7 @@ import Container from "@components/layouts/container";
 import PostBody from "@components/posts/post-body";
 import eyecatch from "images/about.jpg";
 import Accordion from "@components/modules/accordion";
+import React from "react";
 // import BlueFrame from "@/components/blue-frame";
 
 const About: React.FC = () => {

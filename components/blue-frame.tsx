@@ -1,8 +1,14 @@
 import Link from "next/link";
 import styles from "styles/blue-frame.module.scss";
 import Container from "./layouts/container";
+import React from "react";
+import PropTypes from "prop-types";
 
-export default function BlueFrame({ children }) {
+type BlueProps = {
+  children: React.ReactNode;
+}
+
+const BlueFrame: React.FC<BlueProps> = ({ children }) => {
   return (
     <div className={styles.frame}>
       <Container>{children}</Container>
@@ -12,3 +18,9 @@ export default function BlueFrame({ children }) {
     </div>
   );
 }
+
+BlueFrame.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export default BlueFrame;
