@@ -1,7 +1,7 @@
 export const siteMeta = {
-  siteTitle: "CUBE",
-  siteDesc: "The site is for output",
-  siteUrl: "https://rin-blog-masurinkun.vercel.app/",
+  siteTitle: "RINTAのPortfolio",
+  siteDesc: "Webコーダーのポートフォリオサイトになります。実務での制作物や、経歴、スキル感、費用感、スピード感など私についての詳細情報を記載しています。 ",
+  siteUrl: "https://rin-blog.vercel.app/",
   siteLang: "js",
   siteLocale: "ja_JP",
   siteType: "website",
