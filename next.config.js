@@ -4,7 +4,7 @@ const nextConfig = {
   // next/image で扱えるようにするため、外部サイトの画像であるアイキャッチのドメインを指定する
   images: {
     loader: "imgix",
-    path: '',
+    path: '/',
     domains: ["images.microcms-assets.io"],
   },
 };

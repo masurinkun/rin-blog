@@ -4,7 +4,7 @@ import { getAllCategories, getAllSlugs } from "lib/api";
 import { siteMeta } from "lib/constants";
 
 // ページコンポーネントは空にしてHTMLを出力しないようにする
-// export default function Sitemap() {}
+export default function Sitemap() {}
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   // getAllSlugs()で全ての記事のスラッグを取得。
