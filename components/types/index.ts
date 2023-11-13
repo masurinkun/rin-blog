@@ -11,3 +11,9 @@ export type categoryType = {
   name: string;
   slug: string;
 };
+
+export type languageType = {
+  name: string;
+  experience: string;
+  detail: string;
+}

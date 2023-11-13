@@ -89,4 +89,27 @@ export async function getAllPostsByCategory(catID, limit = 100) {
   }
 }
 
+export async function getAllLanguages(limit = 100) {
+  try {
+    const languages = await client.get({
+      endpoint: "skill-sheet",
+      queries: {
+        fields: "language,tool,career,work",
+        limit: limit,
+      },
+    });
+    return languages.contents[0];
+  } catch (err) {
+    console.log("~~ getAllLanguages ~~");
+    console.log(err);
+  }
+}
 
+
+
+// client
+//   .get({
+//     endpoint: "skill-sheet",
+//     contentId: "0axtuh947",
+//   })
+//   .then((res) => console.log(res));
