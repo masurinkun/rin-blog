@@ -1,0 +1,32 @@
+$accent: #f8e5e6;
+
+.content {
+  > * + * {
+    margin-top: var(--space-sm);
+  }
+  > h2 {
+    display: inline-block;
+    border-left: 10px solid var(--accent);
+    padding: 0.2em 0.4em;
+    background-color: rgba($accent, 0.2);
+  }
+
+  > p {
+    font-weight: 600;
+    line-height: 2;
+    letter-spacing: .1em;
+  }
+
+  > ul > li {
+    line-height: 2.4;
+    padding-left: 1em;
+    position: relative;
+    &::before {
+      content: '・';
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 1em;
+    }
+  }
+}

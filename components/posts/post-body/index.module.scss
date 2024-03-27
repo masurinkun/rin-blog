@@ -14,14 +14,15 @@
 }
 
 .stack p {
-  line-height: 1.8;
+  line-height: 2;
+  text-align: justify;
 }
 
 .stack a {
   color: #1592e6 !important;
   transition: all 0.3s ease 0s;
   &:hover {
-    opacity: .7;
+    opacity: 0.7;
   }
 }
 
@@ -33,34 +34,31 @@
 .stack ul li::before {
   content: "・";
   position: absolute;
-  top: .02em;
+  top: 0.02em;
   left: 0;
   font-size: 1em;
 }
 
 .stack table {
   border-collapse: collapse;
-  th,td {
+  width: 1060px;
+  td {
     border: 1px solid var(--gray-25);
     font-size: 14px;
     padding: 0.4em;
-  }
-  th {
-    background-color: rgba(#f8e5e6, .5);
-    font-weight: 400;
-    text-align: left;
-
-    &:nth-of-type(2) {
-      width: 100px;
-      text-align: center;
-    }
-  }
-  td {
     white-space: pre-wrap;
+    &:nth-of-type(1) {
+      min-width: 160px;
+    }
     &:nth-of-type(2) {
+      min-width: 80px;
       text-align: center;
     }
   }
+}
+
+.stack div:has(> table) {
+  overflow-x: scroll;
 }
 
 /* グローバルスタイルでリセットしたスタイルをブラウザ標準のスタイルに戻すように指定 */
