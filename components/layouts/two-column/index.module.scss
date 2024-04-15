@@ -6,11 +6,11 @@
 
 @media (min-width: 768px) {
   .main {
-    width: 768px;
+    width: calc(768 / 1052 * 100%);
   }
 
   .sidebar {
-    width: 240px;
+    width: calc(240 / 1052 * 100%);
     position: sticky;
     top: 40px;
     align-self: flex-start;
