@@ -41,7 +41,8 @@
 
 .stack table {
   border-collapse: collapse;
-  width: 1060px;
+  width: 100%;
+  max-width: 1060px;
   th,
   td {
     border: 1px solid var(--gray-25);
@@ -81,5 +82,8 @@
 @media screen and (max-width: 767px) {
   .stack {
     overflow-x: scroll;
+  }
+  .stack table {
+    width: 1060px;
   }
 }
