@@ -19,19 +19,31 @@ const Social: React.FC<SocialProps> = ( { iconSize = 'initial' } ) => {
       style={{ "--icon-size": iconSize } as React.CSSProperties}
     >
       <li>
-        <a href="https://twitter.com/mocchari2">
+        <a
+          href="https://twitter.com/mocchari2"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FontAwesomeIcon icon={faTwitter} />
           <span className="sr-only">Twitter</span>
         </a>
       </li>
-      <li>
-        <a href="mailto:rinta.barca@gmail.com">
+      {/* <li>
+        <a
+          href="mailto:rinta.barca@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FontAwesomeIcon icon={faGoogle} />
           <span className="sr-only">Gmail</span>
         </a>
-      </li>
+      </li> */}
       <li>
-        <a href="https://github.com/masurinkun">
+        <a
+          href="https://github.com/masurinkun"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FontAwesomeIcon icon={faGithub} />
           <span className="sr-only">Github</span>
         </a>
