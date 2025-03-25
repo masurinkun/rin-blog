@@ -23,7 +23,13 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "strictNullChecks": true
   },
   "target": "es5",
   "lib": [
@@ -48,7 +54,8 @@
     "**/*.ts",
     "**/*.tsx",
     "**/**/*.ts",
-    "**/**/*.tsx"
+    "**/**/*.tsx",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"

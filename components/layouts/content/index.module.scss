@@ -11,6 +11,11 @@ $accent: #f8e5e6;
     background-color: rgba($accent, 0.2);
   }
 
+  div {
+    white-space: pre-wrap;
+    line-height: 2;
+  }
+
   > p {
     font-weight: 600;
     line-height: 2;
