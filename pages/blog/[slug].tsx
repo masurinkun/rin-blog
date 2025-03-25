@@ -89,10 +89,10 @@ const Post: React.FC<PostProps> = ({
           </TwoColumn.Sidebar>
         </TwoColumn>
         <Pagination
-          prevText={prevPost.title}
-          prevUrl={`/blog/${prevPost.slug}`}
-          nextText={nextPost.title}
-          nextUrl={`/blog/${nextPost.slug}`}
+          prevText={prevPost?.title || ""}
+          prevUrl={prevPost ? `/blog/${prevPost.slug}` : ""}
+          nextText={nextPost?.title || ""}
+          nextUrl={nextPost ? `/blog/${nextPost.slug}` : ""}
         />
       </article>
     </Container>
@@ -110,7 +110,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const slug = context.params.slug;
+  if (!context.params?.slug) {
+    return { notFound: true };
+  }
+
+  const slug = context.params.slug as string;
   const post = await getPostBySlug(slug);
   if (!post) {
     return { notFound: true };
