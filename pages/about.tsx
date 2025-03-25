@@ -11,7 +11,6 @@ import React from "react";
 import { getAllLanguages } from "lib/api";
 import { GetStaticProps } from "next";
 import { languageType } from "@components/types";
-// import BlueFrame from "@/components/blue-frame";
 
 type FieldProps = {
   content: {
@@ -49,12 +48,6 @@ const About: React.FC<FieldProps> = ({ content }) => {
           <PostBody>
             <p>
               Web制作のコーディング業務、Webアプリの開発をメインでフリーランスとして働いています。
-            </p>
-            <h2>私のストロングポイントについて</h2>
-            <p>
-              私は、HTMLやCSSを用いてデザインカンプを再現し、レスポンシブ対応も行うことができます。また、WordPressを使用して、ゼロからサイトを構築することも可能です。業務提携を結んでいる制作会社と共に、既に3件の案件をこなしています。
-              タスクランナーの利用や、ファイル分割によるCSS設計など、業務効率化のための環境構築にも力を入れており、スピーディな制作が可能です。また、チーム開発の経験もあり、プロのコードを学んでいるため、品質にも自信があります。
-              さらに、GitやGitHubを使用した開発経験もあります。コミュニケーションや納期管理にも優れたビジネススキルを持っており、過去には2年間、会社員として現場で働いた経験もあります。
             </p>
             <h2>職務経歴</h2>
             <div>
@@ -103,10 +96,6 @@ const About: React.FC<FieldProps> = ({ content }) => {
     </Container>
   );
 };
-
-// About.getLayout = function getLayout(page) {
-//   return <BlueFrame>{page}</BlueFrame>
-// }
 
 export default About;
 
