@@ -20,9 +20,11 @@ type HomeProps = {
 
 const Home: React.FC<HomeProps> = ({ posts, content }) => {
   const reactDetail =
-    content.language.find((lang) => lang.name === "React")?.detail || "";
+    (content.language.find((lang) => lang.name === "React")
+      ?.detail as string) || "";
   const vueDetail =
-    content.language.find((lang) => lang.name === "Vue3")?.detail || "";
+    (content.language.find((lang) => lang.name === "Vue3")?.detail as string) ||
+    "";
 
   return (
     <Container>
